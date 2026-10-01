@@ -1,0 +1,39 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: 5
+
+    paths:
+        - app/
+        - config/
+        - database/
+        - routes/
+
+    excludePaths:
+        - vendor/
+        - bootstrap/cache/
+        - storage/
+        - node_modules/ (?)
+        - public/
+        - resources/views/
+        - tests/
+
+    checkDynamicProperties: false
+    parseModelCastsMethod: true
+    reportUnmatchedIgnoredErrors: false
+    treatPhpDocTypesAsCertain: false
+
+    parallel:
+        maximumNumberOfProcesses: 4
+
+    universalObjectCratesClasses:
+        - Filament\Forms\Components\Component
+        - Filament\Tables\Columns\Column
+        - Filament\Tables\Filters\Filter
+        - Filament\Tables\Actions\Action
+        - Filament\Infolists\Components\Component
+
+    # Ignore known issues in default Laravel config
+    ignoreErrors:
+        - '#Access to constant ATTR_SSL_CA on an unknown class Pdo\\Mysql#'

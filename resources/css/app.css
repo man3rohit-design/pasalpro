@@ -1,0 +1,9 @@
+@import '../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../app/Livewire/**/*.php';
+@source '../views/**/*.blade.php';
+@source '../js/**/*.js';
+
+:root {
+    --font-family: 'Instrument Sans';
+}
