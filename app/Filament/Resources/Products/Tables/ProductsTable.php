@@ -7,6 +7,7 @@ namespace App\Filament\Resources\Products\Tables;
 use App\Filament\Resources\Products\Actions\AdjustStockAction;
 use App\Models\Product;
 use Filament\Actions\ActionGroup;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\IconColumn;
@@ -89,6 +90,7 @@ class ProductsTable
                     ViewAction::make(),
                     EditAction::make(),
                     AdjustStockAction::make(),
+                    DeleteAction::make(),
                 ]),
             ]);
     }
